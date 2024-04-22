@@ -1,11 +1,11 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../Components/Navbar';
 import '../global.css';
 import img1 from '../assets/blood-img1.avif';
 import img2 from '../assets/blood-img2.webp';
 import img3 from '../assets/blood-img1.jpg';
 import {useState, useEffect } from 'react';
-import Content from '../components/Content';
-import Footer from '../components/Footer';
+import Content from '../Components/Content';
+import Footer from '../Components/Footer';
 
 export default function Home()
 {
