@@ -14,7 +14,7 @@ const DonateSection = () => {
     <div className="donate-section">
       <h2>Become a Donor Today!</h2>
       <p>Donate blood and save lives. Your contribution can make a significant impact on those in need.</p>
-      <button className="donate-button">Donate Now</button>
+      <a href='/donate'><button className="donate-button">Donate Now</button></a>
     </div>
   );
 };
