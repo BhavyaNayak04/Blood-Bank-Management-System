@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color:black;
+}
+
+.about-us-container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .about-us-section {
+    display: flex;
+    align-items: center;
+    background-color: rgba(247, 240, 240, 0.87);
+    border-radius: 5px;
+    padding:20px;
+  }
+  
+  .about-us-content {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .why-donate-section {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(247, 240, 240, 0.87);
+    border-radius: 5px;
+    padding:20px;
+  }
+  .why-donate-content {
+    flex: 1;
+    margin-right: 10px;
+  }
+  p {
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  li{
+    margin-left: 50px;
+    text-align: left;
+    color: #666;
+  }
+  .image {
+    max-width: 300px;  
+  }
+  h1 {
+    color: #000000;
+    text-align: left;
+  }
+  
