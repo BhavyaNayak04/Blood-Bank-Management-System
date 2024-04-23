@@ -124,7 +124,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 30%; /* Adjust width as needed */
+  width: 30%; 
 }
 
 .card h2 {
@@ -209,4 +209,11 @@
 
 .footer-nav a:hover {
   color: #ffd700; /* Change color on hover */
+}
+
+.bgsection{
+  background-color: #e0c5c5;
+  border-radius: 5px;
+  padding:20px;
+  margin:100px;
 }

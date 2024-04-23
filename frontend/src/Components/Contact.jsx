@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
@@ -24,7 +22,6 @@ const ContactPage = () => {
   try {
     await axios.post('http://localhost:8081/submit-feedback', formData);
     toast.success('Feedback submitted successfully!');
-    // Clear form data
     setFormData({
       name: '',
       email: '',
@@ -34,7 +31,6 @@ const ContactPage = () => {
   } catch (error) {
     console.error('Error submitting feedback:', error);
     toast.error('Failed to submit feedback. Please try again later.');
-    // Handle error
   }
 };
 
