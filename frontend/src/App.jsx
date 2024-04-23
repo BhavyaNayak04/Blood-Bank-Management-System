@@ -2,10 +2,9 @@ import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ContactUs from './pages/ContactUs';
 import Donate from './pages/Donate';
-// import Navbar from './Components/Navbar'
-// import Footer from './Components/Footer'
-// import About from './Components/About';
 import {Routes, BrowserRouter, Route} from 'react-router-dom';
+import Search from './pages/Search';
+import BloodAvailable from './pages/BloodAvailable';
 export default function App() {
   return (
     <>
@@ -17,8 +16,9 @@ export default function App() {
             {/* donate page */}
             <Route path='/donate' element={<Donate/>}/> 
             {/* search page */}
-            <Route path='/search' element={<AboutPage/>}/>
+            <Route path='/search' element={<Search/>}/>
 
+            <Route path="/search-results" element={<BloodAvailable/>}/>
 
             <Route path='/contact' element={<ContactUs/>}/>
         </Routes>
