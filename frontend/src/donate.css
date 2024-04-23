@@ -2,7 +2,7 @@
     max-width: 65%;
     padding: 20px;
     border-radius: 5px;
-    background-color: rgba(171, 169, 175, 0.509);
+    background-color: rgba(244, 225, 225, 0.87);
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -22,13 +22,13 @@
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #a19e9e;  
+    background-color: #d6cece;  
   }
   
   .donate-container button {
     width: 15%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #d12506;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -37,7 +37,7 @@
     align-items: center;
   }
   
-  .form-container button:hover {
-    background-color: #0056b3;
+  .donate-container button:hover {
+    background-color: #e55b3c;
   }
   

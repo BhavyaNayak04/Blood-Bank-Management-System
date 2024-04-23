@@ -2,9 +2,6 @@ import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ContactUs from './pages/ContactUs';
 import Donate from './pages/DonatePage';
-// import Navbar from './Components/Navbar'
-// import Footer from './Components/Footer'
-// import About from './Components/About';
 import {Routes, BrowserRouter, Route} from 'react-router-dom';
 export default function App() {
   return (
@@ -16,8 +13,6 @@ export default function App() {
             <Route path='/donate' element={<Donate/>}/> 
             /* search page */
             <Route path='/search' element={<AboutPage/>}/>
-
-
             <Route path='/contact' element={<ContactUs/>}/>
         </Routes>
       </BrowserRouter>
