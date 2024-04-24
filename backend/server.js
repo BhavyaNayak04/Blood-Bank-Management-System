@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
 const app = express();
+const bodyParser = require('body-parser');
 
 app.listen(8081, () => {
     console.log('Listening on port 8081');
@@ -212,4 +213,31 @@ app.get("/hospitals", (req, res) => {
         return res.json(data); // Return the result containing hospital IDs and names
     });
 });
+
+const adminCredentials = {
+    username: 'bloodadmin',
+    password: 'admin123',
+  };
+
+  app.use(bodyParser.json());
+
+  app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+
+    if (username === adminCredentials.username && password === adminCredentials.password) {
+      res.status(200).json();
+    } else {
+      res.status(401).json({ message: 'Invalid username or password' });
+    }
+  });
+
+
+
+
+
+
+
+
+
+
 

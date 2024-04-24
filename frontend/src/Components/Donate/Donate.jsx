@@ -46,8 +46,10 @@ function DonateBloodForm() {
   };
 
   return (
+    <>
+    <h1>Donate Blood</h1>
     <div className='donate-container'>
-      <h1>Donate Blood</h1>
+      
         <form onSubmit={handleSubmit}>
         <label>Name</label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -85,6 +87,7 @@ function DonateBloodForm() {
       </form>
       <ToastContainer/>
     </div>
+    </>
   );
 }
 

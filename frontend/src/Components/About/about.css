@@ -2,7 +2,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
   color:black;
 }
 
@@ -51,8 +50,5 @@ body {
   .image {
     max-width: 300px;  
   }
-  h1 {
-    color: #000000;
-    text-align: left;
-  }
+ 
   

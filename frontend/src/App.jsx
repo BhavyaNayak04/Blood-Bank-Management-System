@@ -9,11 +9,9 @@ import Logout from './pages/Logout';
 import AdminLayout from './pages/AdminLayout';
 import AdminHome from './pages/AdminHome';
 import ModifyDonors from "./Components/Admin/ModifyDonor";
-import ModifyCity from "./Components/Admin/ModifyCity";
 import ModifyHospital from "./Components/Admin/ModifyHospital";
 import Queries from "./Components/Admin/Queries";
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import LoginPage from './pages/LoginPage';
 
 export default function App() {
   return (
@@ -34,6 +32,7 @@ export default function App() {
             </Route>
             <Route path='/logout' element={<Logout/>}/>
             <Route path="*" element={<Navigate to="/" />} />
+            <Route path='/login' element={<LoginPage/>}/>
         </Routes>
       </BrowserRouter>
 
