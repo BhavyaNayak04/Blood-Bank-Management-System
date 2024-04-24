@@ -76,20 +76,7 @@ app.post("/submit-feedback", (req, res) => {
 });
 
 
-// Updated backend code
-// app.post("/search-blood", (req, res) => {
-//     const { bloodGroup, city } = req.body;
-//     const sql = "SELECT * FROM donor WHERE hosp_id IN (SELECT hosp_id FROM hospital WHERE city_id = ?) AND bg_id = ?";
-//     db.query(sql, [city, bloodGroup], (err, data) => {
-//         if (err) {
-//             console.error('Error executing MySQL query: ' + err.stack);
-//             return res.status(500).json({ error: 'Internal Server Error' });
-//         }
-//         return res.json(data);
-//     });
-// });
 
-// Updated backend code
 app.post("/search-blood", (req, res) => {
     const { bloodGroup, city } = req.body;
     const sql = `
@@ -133,3 +120,96 @@ app.get("/blood-groups", (req, res) => {
         return res.json(data);
     });
 });
+
+
+/*Admin thingy*/
+app.get("/donor-details", (req, res) => {
+    const sql = `
+        SELECT donor.*, hospital.hosp_name AS hospital_name, city.city_name AS city_name
+        FROM donor
+        INNER JOIN hospital ON donor.hosp_id = hospital.hosp_id
+        INNER JOIN city ON hospital.city_id = city.city_id
+    `;
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error('Error executing MySQL query: ' + err.stack);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        return res.json(data);
+    });
+});
+
+app.delete("/donor-details/:id", (req, res) => {
+    const donorId = req.params.id;
+    const sql = "DELETE FROM donor WHERE d_id = ?";
+    db.query(sql, [donorId], (err, result) => {
+        if (err) {
+            console.error('Error deleting donor:', err);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        console.log('Donor deleted successfully');
+        return res.status(200).json({ message: 'Donor deleted successfully' });
+    });
+});
+
+app.get("/feedbacks", (req, res) => {
+    const sql = "SELECT * FROM feedback";
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error('Error executing MySQL query: ' + err.stack);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        return res.json(data);
+    });
+});
+
+app.delete("/feedbacks/:id", (req, res) => {
+    const feedbackId = req.params.id;
+    const sql = "DELETE FROM feedback WHERE f_id = ?";
+    db.query(sql, [feedbackId], (err, result) => {
+        if (err) {
+            console.error('Error executing MySQL query: ' + err.stack);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        console.log(`Feedback with ID ${feedbackId} deleted successfully`);
+        return res.json({ message: 'Feedback deleted successfully' });
+    });
+});
+
+app.get("/total-donors", (req, res) => {
+    const sql = "SELECT COUNT(*) AS total_donors FROM donor";
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error('Error executing MySQL query: ' + err.stack);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        return res.json(data[0]); // Return the first row of the result (contains total donors)
+    });
+});
+
+// Endpoint to fetch total number of queries
+app.get("/total-queries", (req, res) => {
+    const sql = "SELECT COUNT(*) AS total_queries FROM feedback";
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error('Error executing MySQL query: ' + err.stack);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        return res.json(data[0]); // Return the first row of the result (contains total queries)
+    });
+});
+
+// Server.js
+
+// Add a new endpoint to fetch all hospital IDs and names
+app.get("/hospitals", (req, res) => {
+    const sql = "SELECT hosp_id, hosp_name FROM hospital";
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error('Error executing MySQL query: ' + err.stack);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+        return res.json(data); // Return the result containing hospital IDs and names
+    });
+});
+

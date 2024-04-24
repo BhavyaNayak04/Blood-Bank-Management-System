@@ -302,3 +302,134 @@
   text-align: center; /* Center align text */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
+
+.admin-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px; /* Adjust width as needed */
+  background-color: #333; /* Sidebar background color */
+  padding-top: 20px; /* Adjust top padding as needed */
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-sidebar li {
+  margin-bottom: 10px; /* Adjust spacing between items as needed */
+}
+
+.admin-sidebar a {
+  display: block;
+  color: #fff; /* Link text color */
+  text-decoration: none;
+  padding: 10px; /* Adjust padding as needed */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.admin-sidebar a:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+/* Add background color to li */
+.admin-sidebar li {
+  background-color: #444; /* Background color for list items */
+}
+
+/*extra*/
+.admin-sidebar li.active a {
+  background-color: #0e335c; /* Background color for active link */
+}
+
+.admin-sidebar li.active a:hover {
+  background-color: #0e335c; /* Darker background color for active link on hover */
+}
+/*extra*/
+
+
+.admin-content {
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ccc;
+    min-height: 100vh;
+}
+
+.admin-home {
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.admin-card {
+  background-color: #f0f0f0; /* Background color of the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin: 30px 20px; /* Add spacing around the cards */
+  width: calc(50% - 40px); /* Make the cards half the width of the container minus spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  display: inline-block; /* Display cards inline */
+  vertical-align: top; /* Align cards to the top */
+}
+
+.admin-card h3 {
+  color: #333; /* Text color for heading */
+  margin-bottom: 10px; /* Add spacing between heading and paragraph */
+}
+
+.admin-card p {
+  color: #666; 
+  text-align: center;/* Text color for paragraph */
+}
+
+/* Container styling */
+.donors-container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+.donors-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Header row styling */
+.donors-list th {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+}
+
+/* Data row styling */
+.donors-list td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Alternate row background */
+.donors-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect */
+.donors-list tr:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+/* Center align text for last column */
+.donors-list td:last-child {
+  text-align: center;
+}
