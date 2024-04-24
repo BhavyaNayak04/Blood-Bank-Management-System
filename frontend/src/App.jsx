@@ -24,8 +24,9 @@ export default function App() {
             <Route path='/search-results' element={<BloodAvailable/>}/>
             <Route path='/contact' element={<ContactUs/>}/>
             <Route path='/about' element={<AboutPage/>}/>
+            <Route path='/admin' element={<Navigate to="/admin/home" />} />
             <Route path='/admin/*' element={<AdminLayout/>}>
-              <Route path='home' element={<AdminHome/>}></Route>
+              <Route path='home' element={<AdminHome/>}/>
               <Route path="modify-donors" element={<ModifyDonors/>} />
               <Route path="modify-hospitals" element={<ModifyHospital/>} />
               <Route path="resolve-issues" element={<Queries/>} />

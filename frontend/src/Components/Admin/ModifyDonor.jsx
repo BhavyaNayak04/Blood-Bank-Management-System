@@ -2,14 +2,21 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 import Donate from '../Donate/Donate';
 
 function DonorsList() {
   const [donors, setDonors] = useState([]);
   const [showForm, setShowForm] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch donors data from the backend
+    
+    console.log(localStorage.getItem('loggedIn'));
+     if (!localStorage.getItem('loggedIn')) {
+      navigate('/login'); // Redirect to login page if not logged in
+    }
+
     axios.get('http://localhost:8081/donor-details')
       .then(response => {
         setDonors(response.data);

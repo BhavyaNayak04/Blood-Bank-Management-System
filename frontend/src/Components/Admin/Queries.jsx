@@ -3,11 +3,20 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../../global.css';
+import { useNavigate } from 'react-router-dom';
 
 function FeedbackList() {
   const [feedbacks, setFeedbacks] = useState([]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
+
+    console.log(localStorage.getItem('loggedIn'));
+     if (!localStorage.getItem('loggedIn')) {
+      navigate('/login'); // Redirect to login page if not logged in
+    }
+
     // Fetch feedback data from the backend
     axios.get('http://localhost:8081/feedbacks')
       .then(response => {

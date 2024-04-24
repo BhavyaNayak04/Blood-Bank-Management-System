@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../global.css'; // Import global CSS file for styling
+import { useNavigate } from 'react-router-dom';
 
 export default function HospitalView() {
   const [hospitals, setHospitals] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
+
+    console.log(localStorage.getItem('loggedIn'));
+     if (!localStorage.getItem('loggedIn')) {
+      navigate('/login'); // Redirect to login page if not logged in
+    }
+
     // Fetch all hospital IDs and names
     axios.get('http://localhost:8081/hospitals')
       .then(response => {

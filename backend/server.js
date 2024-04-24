@@ -225,7 +225,9 @@ const adminCredentials = {
     const { username, password } = req.body;
 
     if (username === adminCredentials.username && password === adminCredentials.password) {
-      res.status(200).json();
+        console.log('logged in successfully!');
+        res.status(200).json();
+      
     } else {
       res.status(401).json({ message: 'Invalid username or password' });
     }
