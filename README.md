@@ -15,17 +15,17 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 
 To get started with the project, follow these steps:
-1. Fork my repository
-2. Clone the forked repository to your local machine
-   git clone https://github.com/your/repository.git
+1. Fork the repository
+2. Clone the forked repository to your local machine:
+   `git clone https://github.com/your/repository.git`
    
 ## Backend (Node.js)
 
 1. Navigate to the backend directory:
-   cd backend
+   `cd backend`
 
 2. Install dependencies:
-   npm i
+   `npm i`
 
 3. Set up MySQL database using XAMPP:
 - Start the XAMPP control panel.
@@ -35,18 +35,18 @@ To get started with the project, follow these steps:
 - Import dbms_blood.sql file
 
 4. Start the backend server:
-   npm start
+   `npm start`
 
 ## Frontend (React.js)
 
 1. Navigate to the frontend directory:
-   cd frontend
+   `cd frontend`
 
 2. Install dependencies:
-   npm i
+   `npm i`
 
 3. Start the frontend development server:
-   npm run dev
+   `npm run dev`
 
 4. Head over to `http://localhost:5173/` in the browser to view the application
 
