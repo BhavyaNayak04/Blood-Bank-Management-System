@@ -13,7 +13,7 @@ export default function Navbar(){
       <li><a href="/about">Why donate?</a></li>
       <li><a href="/about">About Us</a></li>
       <li><a href="/contact">Contact Us</a></li>
-      <li><a href="/admin">Login</a></li>
+      <li><a href="/login">Login</a></li>
     </ul>
   </div>
   </div>
