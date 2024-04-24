@@ -160,6 +160,7 @@ app.get("/feedbacks", (req, res) => {
             console.error('Error executing MySQL query: ' + err.stack);
             return res.status(500).json({ error: 'Internal Server Error' });
         }
+        console.log(data);
         return res.json(data);
     });
 });

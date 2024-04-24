@@ -59,7 +59,7 @@ function FeedbackList() {
             <tr key={feedback.f_id}>
               <td>{feedback.f_name}</td>
               <td>{feedback.f_email}</td>
-              <td>{feedback.f_mobile}</td>
+              <td>{feedback.f_phone}</td>
               <td>{feedback.f_message}</td>
               <td>
                 <button className="resolve-button" onClick={() => handleResolve(feedback.f_id)}>Resolve</button>
