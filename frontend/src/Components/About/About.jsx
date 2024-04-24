@@ -1,7 +1,7 @@
 import React from 'react'
-import '../about.css'
-import about from '../assets/images/about.png'
-import whydonate  from '../assets/images/whydonate.png'
+import './about.css'
+import about from '../../assets/images/about.png'
+import whydonate  from '../../assets/images/whydonate.png'
 
 const AboutUsPage = () => {
   return (   

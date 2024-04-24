@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../bloodsearch.css'; // Import CSS file for styling
+import './bloodsearch.css'; // Import CSS file for styling
 
 function BloodSearchForm() {
   const [bloodGroup, setBloodGroup] = useState('');

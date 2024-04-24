@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import '../global.css'; // Import CSS file for styling
+import '../../global.css'; // Import CSS file for styling
 
 function SearchResult() {
   const location = useLocation();
@@ -22,14 +22,18 @@ function SearchResult() {
     <div className='parent' style={{backgroundColor:'#e0c5c5'}}>
       <h1 style={{textAlign:'center', paddingTop:'30px'}}>Available Blood</h1>
       <div className="search-results-container">
-        {searchResults.map(donor => (
-          <div key={donor.d_id} className="search-result-card">
-            <h2>{donor.hosp_name}</h2>
-            <p>Donor: {donor.d_name}</p>
-            <p>Phone Number: {donor.d_mobile}</p>
-            <button className="inquire-button" onClick={() => handleInquire(donor)}>Inquire</button>
-          </div>
-        ))}
+        {searchResults.length === 0 ? (
+          <div className='nodatafound'>No data found</div>
+        ) : (
+          searchResults.map(donor => (
+            <div key={donor.d_id} className="search-result-card">
+              <h2>{donor.hosp_name}</h2>
+              <p>Donor: {donor.d_name}</p>
+              <p>Phone Number: {donor.d_mobile}</p>
+              <button className="inquire-button" onClick={() => handleInquire(donor)}>Inquire</button>
+            </div>
+          ))
+        )}
       </div>
       {showInquiry && (
         <div className="inquiry-modal">

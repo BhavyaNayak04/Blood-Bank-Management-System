@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../contact.css';
+import './contact.css';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

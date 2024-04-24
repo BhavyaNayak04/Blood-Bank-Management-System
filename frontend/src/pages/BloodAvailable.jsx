@@ -1,4 +1,4 @@
-import SearchResult from "../Components/SearchResult";
+import SearchResult from "../Components/Search/SearchResult";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 

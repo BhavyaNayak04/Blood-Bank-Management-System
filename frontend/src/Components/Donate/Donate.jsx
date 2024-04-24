@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
-import '../donate.css';
+import './donate.css';
+
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -52,7 +53,7 @@ function DonateBloodForm() {
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
         
         <label>Age</label>
-        <input type="number" value={age} onChange={(e) => setAge(e.target.value)} required />
+        <input type="text" value={age} onChange={(e) => setAge(e.target.value)} required />
         
         <label>Gender</label>
         <select value={gender} onChange={(e) => setGender(e.target.value)} required>
@@ -80,7 +81,7 @@ function DonateBloodForm() {
           ))}
         </select>
         
-        <button type="submit">Submit</button>
+        <button type="submit" className='donor-button'>Submit</button>
       </form>
       <ToastContainer/>
     </div>

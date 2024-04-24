@@ -1,4 +1,4 @@
-import Donate from '../Components/Donate';
+import Donate from '../Components/Donate/Donate';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 

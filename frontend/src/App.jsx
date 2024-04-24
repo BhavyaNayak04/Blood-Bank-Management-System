@@ -11,11 +11,11 @@ export default function App() {
       <BrowserRouter>
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/about' element={<AboutPage/>}/>
+            <Route path='/search' element={<Search/>}/>
             <Route path='/donate' element={<Donate/>}/> 
-            /* search page */
-            <Route path='/search' element={<AboutPage/>}/>
+            <Route path='/search-results' element={<BloodAvailable/>}/>
             <Route path='/contact' element={<ContactUs/>}/>
+            <Route path='/about' element={<AboutPage/>}/>
         </Routes>
       </BrowserRouter>
 

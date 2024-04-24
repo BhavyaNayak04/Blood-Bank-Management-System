@@ -216,7 +216,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 10px 200px;
+  margin: 10px 100px 0 100px;
 }
 
 .search-result-card {
@@ -283,6 +283,22 @@
 .bgsection{
   background-color: #e0c5c5;
   border-radius: 5px;
-  padding:20px;
+  padding:30px;
   margin:100px;
+  transition: transform ease-in-out 0.7s;
+}
+
+.bgsection:hover{
+  transform: scale(1.05);
+}
+
+.nodatafound {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text color */
+  padding: 10px 20px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  margin: 20px auto; /* Center horizontally with some spacing from other elements */
+  max-width: 300px; /* Limit width to prevent it from spanning the entire width */
+  text-align: center; /* Center align text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
