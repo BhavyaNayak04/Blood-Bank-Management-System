@@ -9,6 +9,7 @@ const AboutUsPage = () => {
       <div className='about-us-section'>
         <div className='about-us-content'>
             <h1>About Us</h1>
+            <br></br>
             <p>
                 Welcome to our Blood Bank Management System! We are dedicated to
                 providing a platform that facilitates the donation and distribution of
@@ -33,6 +34,7 @@ const AboutUsPage = () => {
       <div className='why-donate-section'>
          <div className='why-donate-content'>
             <h1>Why should I donate blood?</h1>
+            <br></br>
             <p>Blood is the most precious gift that anyone can give to another person - the gift of life.
                 A decision to donate your blood can save a life, or even several if your blood is separated 
                 into its components-red cells, platelets and plasma - which can be used individually for

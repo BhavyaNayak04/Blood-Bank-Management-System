@@ -54,6 +54,7 @@ const ContactPage = () => {
       </div>
       <div className="contact-section">
         <h2>Contact Details</h2>
+        <br></br>
         <p>Email: manager@bloodbank.in</p>
         <p>Phone: 91234567890</p>
         <p>Address: NMAMIT, Nitte, Karkala - 576105</p>
