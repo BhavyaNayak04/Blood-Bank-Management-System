@@ -5,6 +5,7 @@ import Donate from './pages/DonatePage';
 import {Routes, BrowserRouter, Route} from 'react-router-dom';
 import Search from './pages/Search';
 import BloodAvailable from './pages/BloodAvailable';
+import LoginPage from './pages/LoginPage';
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
             <Route path='/search-results' element={<BloodAvailable/>}/>
             <Route path='/contact' element={<ContactUs/>}/>
             <Route path='/about' element={<AboutPage/>}/>
-      
+            <Route path='/login' element={<LoginPage/>}/>
         </Routes>
       </BrowserRouter>
 

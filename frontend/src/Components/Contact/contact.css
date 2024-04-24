@@ -4,7 +4,7 @@
     border-radius: 5px;
     display:flex;
     justify-content: space-between;
-    background-color: rgba(171, 169, 175, 0.509);
+    background-color: #f2f2f2;
     margin: 50px auto;
   }
   
@@ -31,6 +31,7 @@
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #fff;
   }
   
   button {
