@@ -2,7 +2,7 @@
 
 Welcome!
 
-This project is a full-stack application built with React.js with Vite for the frontend, Node.js for the backend, and MySQL as the database using XAMPP. 
+This project is a full-stack application built with React.js + Vite for the frontend, Node.js for the backend, and MySQL as the database using XAMPP. 
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ To get started with the project, follow these steps:
 2. Clone the forked repository to your local machine
    git clone https://github.com/your/repository.git
    
-### Backend (Node.js)
+## Backend (Node.js)
 
 1. Navigate to the backend directory:
    cd backend
