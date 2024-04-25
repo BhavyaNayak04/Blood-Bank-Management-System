@@ -42,13 +42,13 @@ const ContactPage = () => {
         <h3>Send us a message</h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required/>
           <label htmlFor="mobile">Mobile Number:</label>
-          <input type="text" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} />
+          <input type="text" id="mobile" name="mobile" value={formData.mobile} onChange={handleChange} required/>
           <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange} />
+          <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange} required/>
           <button type="submit">Submit</button>
         </form>
       </div>
